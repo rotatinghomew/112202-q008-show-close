@@ -50,5 +50,54 @@
     "studio",
     "received",
     "evidence"
+  ],
+  "exposure.tsv": [
+    "exposure",
+    "period",
+    "group",
+    "candidates",
+    "origin",
+    "may_preheat",
+    "source",
+    "received"
+  ],
+  "exposure_corrections.tsv": [
+    "evidence",
+    "exposure",
+    "confirmed_session",
+    "tender",
+    "received"
+  ],
+  "controls.tsv": [
+    "session",
+    "companion",
+    "open_area",
+    "unaffected_base",
+    "match_class",
+    "ordinary_revenue"
+  ],
+  "rights.tsv": [
+    "period",
+    "studio",
+    "guaranteed",
+    "max_bonus",
+    "pool_key",
+    "pool_rate",
+    "carry"
+  ],
+  "bonus_payments.tsv": [
+    "payment",
+    "period",
+    "studio",
+    "day",
+    "amount",
+    "kind",
+    "pool_key"
+  ],
+  "preheat_link.tsv": [
+    "exposure",
+    "show",
+    "control",
+    "starts_before"
   ]
 }

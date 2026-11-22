@@ -21,3 +21,9 @@ python3 -m unittest discover -s tests
 - `shared.tsv`：会计约定分担比例 studio:weight，以相应受益量分担；unit=direct 为边际开支，shared 为共享费用，不等同边际开支。 列顺序为 `period`、`service`、`amount`、`studios`、`allocation`、`unit`。
 - `paid.tsv`：got 为已发金额（分）；reserve 是已留置非已付。只对原凭证的闭账操作有效。 列顺序为 `closure`、`period`、`tender`、`studio`、`got`、`paid_at`、`state`。
 - `amend.tsv`：确认可用于改归的凭证按收到时点改变事实；不更改原历史出账。 列顺序为 `amend`、`tender`、`session`、`studio`、`received`、`evidence`。
+- `exposure.tsv`：共享团可能影响多个场次；candidates 中谁为正式到场由票据或确认决定，may_preheat 中的时段可受预热影响。 列为 `exposure`、`period`、`group`、`candidates`、`origin`、`may_preheat`、`source`、`received`。
+- `exposure_corrections.tsv`：集团到场的确认与凭证确认引用相同结算事实；confirmed_session 为唯一可支持场次。 列为 `evidence`、`exposure`、`confirmed_session`、`tender`、`received`。
+- `controls.tsv`：companion 为联合举办或预热关联窗口；unaffected_base 为按当时告知可能作通常营业的标注，不是终局资格；金额单位分。 列为 `session`、`companion`、`open_area`、`unaffected_base`、`match_class`、`ordinary_revenue`。
+- `rights.tsv`：金额分；pool_rate 用小数；carry 是已确认减款允许抵扣的下一周期。 列为 `period`、`studio`、`guaranteed`、`max_bonus`、`pool_key`、`pool_rate`、`carry`。
+- `bonus_payments.tsv`：正式付款、本期预留与已签保底分开记录；金额分。 列为 `payment`、`period`、`studio`、`day`、`amount`、`kind`、`pool_key`。
+- `preheat_link.tsv`：特定确认到场解释会令某个普通营业窗口不再合格；同一曝光事件仍只能归到一个确认场次。 列为 `exposure`、`show`、`control`、`starts_before`。

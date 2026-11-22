@@ -1,0 +1,6 @@
+payment	period	studio	day	amount	kind	pool_key
+BP1	M1	A	13	1200	guarantee	J1
+BP2	M1	B	13	1500	guarantee	J1
+BP3	M1	A	13	1900	bonus	J1
+BP4	M1	B	13	3800	reserve	J1
+BP5	M2	A	19	2400	reserve	J2

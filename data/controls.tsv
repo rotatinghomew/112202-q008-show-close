@@ -1,0 +1,11 @@
+session	companion	open_area	unaffected_base	match_class	ordinary_revenue
+S1	S2	28	no	wk-A	-
+S2	S1	28	no	wk-A	-
+S3	S2	30	yes	wk-A	8900
+S4	S2	28	yes	wk-A	8400
+S5	-	27	yes	wk-A	9500
+S6	-	14	no	peak-B	-
+S7	S8	20	no	wk-C	-
+S8	S7	20	no	wk-C	-
+S9	S7	20	yes	wk-C	7600
+S10	-	20	yes	wk-C	8100

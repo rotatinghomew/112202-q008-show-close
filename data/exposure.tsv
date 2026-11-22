@@ -1,0 +1,7 @@
+exposure	period	group	candidates	origin	may_preheat	source	received
+EX1	M1	G1	S1,S2	S1	S3	ticket	5
+EX2	M1	G2	S1	S1	-	scan	4
+EX3	M1	G3	S2	S2	S4	announced	8
+EX4	M1	G7	S5	S5	-	scan	8
+EX5	M2	G4	S7,S8	S7	S9	ticket	17
+EX6	M2	G8	S8	S8	-	scan	18

@@ -1,0 +1,6 @@
+period	studio	guaranteed	max_bonus	pool_key	pool_rate	carry
+M1	A	1200	7200	J1	0.65	M2
+M1	B	1500	5100	J1	0.65	M2
+M2	A	1300	6200	J2	0.55	M3
+M2	B	1500	5200	J2	0.55	M3
+M2	C	1600	4600	J2	0.55	M3

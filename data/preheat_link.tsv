@@ -1,0 +1,4 @@
+exposure	show	control	starts_before
+EX1	S2	S3	3
+EX3	S2	S4	2
+EX5	S7	S9	2
