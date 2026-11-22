@@ -1,0 +1,6 @@
+ticket	session	holder	admitted	day	evidence
+L1	S1	G1	yes	2	scan
+L1	S2	G1	transfer	2	reported
+L2	S1	G2	yes	2	scan
+L3	S2	G3	yes	2	scan
+L5	S7	G4	yes	4	scan

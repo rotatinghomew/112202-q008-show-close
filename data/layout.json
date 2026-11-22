@@ -1,0 +1,54 @@
+{
+  "sessions.tsv": [
+    "session",
+    "period",
+    "hall",
+    "band",
+    "format",
+    "traffic",
+    "observed"
+  ],
+  "claims.tsv": [
+    "proof",
+    "tender",
+    "ticket",
+    "session",
+    "studio",
+    "kind",
+    "amount",
+    "observed"
+  ],
+  "tickets.tsv": [
+    "ticket",
+    "session",
+    "holder",
+    "admitted",
+    "day",
+    "evidence"
+  ],
+  "shared.tsv": [
+    "period",
+    "service",
+    "amount",
+    "studios",
+    "allocation",
+    "unit"
+  ],
+  "paid.tsv": [
+    "closure",
+    "period",
+    "tender",
+    "studio",
+    "got",
+    "paid_at",
+    "state"
+  ],
+  "amend.tsv": [
+    "amend",
+    "tender",
+    "session",
+    "studio",
+    "received",
+    "evidence"
+  ]
+}

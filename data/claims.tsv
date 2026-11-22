@@ -1,0 +1,12 @@
+proof	tender	ticket	session	studio	kind	amount	observed
+R-amb	X12	L1	S1	A	reported	3500	5
+R-dup	X12	L1	S2	B	reported	3500	6
+R2	X13	L2	S1	A	payment	5500	7
+R3	X14	-	S3	A	payment	4100	8
+R4	X15	-	S4	B	payment	5900	9
+R5	X16	L3	S2	B	payment	6100	10
+R6	X17	-	S5	A	payment	6200	11
+R7	X18	-	S6	C	payment	9000	12
+R8	X16	L3	S2	B	reversal	-1100	16
+R9	X20	L5	S7	A	reported	4500	18
+R10	X20	L5	S7	B	reported	4500	18

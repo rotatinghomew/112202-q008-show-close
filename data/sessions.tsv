@@ -1,0 +1,9 @@
+session	period	hall	band	format	traffic	observed
+S1	M1	hall-A	wk	show	126	full
+S2	M1	hall-A	wk	show	132	full
+S3	M1	hall-A	wk	ordinary	133	full
+S4	M1	hall-A	wk	ordinary	119	full
+S5	M1	hall-A	wk	ordinary	124	full
+S6	M2	hall-B	peak	show	220	full
+S7	M2	hall-A	wk	show	141	full
+S8	M2	hall-A	wk	ordinary	133	partial
