@@ -1,0 +1,61 @@
+{
+  "basis": "area",
+  "control_changes": [
+    {
+      "change": "lost",
+      "reasons": [
+        "被预热链 EX1 污染（确认场次 S2）"
+      ],
+      "session": "S3"
+    }
+  ],
+  "formal_refs": [
+    "AM1",
+    "BP1",
+    "BP2",
+    "BP3",
+    "BP4",
+    "K1"
+  ],
+  "lines": [
+    {
+      "amount": null,
+      "code": "AM1",
+      "direction": "disclose",
+      "evidence": "scan",
+      "explanation": "凭证 X12 后到确认归 S2/B；原历史出账不回改，按新归属另开调账",
+      "kind": "attribution",
+      "studio": "B"
+    },
+    {
+      "amount": 3500,
+      "code": "K1",
+      "direction": "deductible",
+      "evidence": "closure K1 / AM1",
+      "explanation": "原由 A 签收的 3500 分经 AM1 确认应归 B，列为 A 本方待抵扣/争议，不得抵其他方款项",
+      "kind": "carry",
+      "studio": "A"
+    },
+    {
+      "amount": 3500,
+      "code": "K1",
+      "direction": "payable",
+      "evidence": "closure K1 / AM1",
+      "explanation": "确认归属后对 B 补付，资金来源不依赖原收款方退款",
+      "kind": "attribution_payable",
+      "studio": "B"
+    },
+    {
+      "amount": 3800,
+      "code": "RES-B",
+      "direction": "disclose",
+      "evidence": "bonus_payments.reserve",
+      "explanation": "预留仍无奖金依据，继续留置，未决金额不得静默释放",
+      "kind": "reserve",
+      "studio": "B"
+    }
+  ],
+  "new_cutoff": 15,
+  "period": "M1",
+  "prior_cutoff": 13
+}

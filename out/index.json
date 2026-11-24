@@ -1,0 +1,40 @@
+{
+  "periods": {
+    "M1": {
+      "cutoffs": [
+        {
+          "bases": [
+            "area",
+            "traffic"
+          ],
+          "day": 13
+        },
+        {
+          "bases": [
+            "area",
+            "traffic"
+          ],
+          "day": 15
+        }
+      ]
+    },
+    "M2": {
+      "cutoffs": [
+        {
+          "bases": [
+            "area",
+            "traffic"
+          ],
+          "day": 19
+        },
+        {
+          "bases": [
+            "area",
+            "traffic"
+          ],
+          "day": 23
+        }
+      ]
+    }
+  }
+}

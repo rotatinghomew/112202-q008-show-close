@@ -1,0 +1,41 @@
+{
+  "basis": "area",
+  "control_changes": [],
+  "formal_refs": [
+    "AM2",
+    "BP5",
+    "K2"
+  ],
+  "lines": [
+    {
+      "amount": null,
+      "code": "AM2",
+      "direction": "disclose",
+      "evidence": "scan",
+      "explanation": "凭证 X20 后到确认归 S7/B；原历史出账不回改，按新归属另开调账",
+      "kind": "attribution",
+      "studio": "B"
+    },
+    {
+      "amount": 4500,
+      "code": "K2",
+      "direction": "payable",
+      "evidence": "paid.reserve / amend",
+      "explanation": "托管凭证经后到确认归本方，原托管记录不回改，在新单调账为可签收补付",
+      "kind": "custody_release",
+      "studio": "B"
+    },
+    {
+      "amount": 2400,
+      "code": "RES-A",
+      "direction": "disclose",
+      "evidence": "bonus_payments.reserve",
+      "explanation": "预留仍无奖金依据，继续留置，未决金额不得静默释放",
+      "kind": "reserve",
+      "studio": "A"
+    }
+  ],
+  "new_cutoff": 23,
+  "period": "M2",
+  "prior_cutoff": 19
+}

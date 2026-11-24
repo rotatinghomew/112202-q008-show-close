@@ -1,0 +1,214 @@
+{
+  "basis": "area",
+  "cutoff_day": 15,
+  "period": "M1",
+  "pool": {
+    "joint_net_increment_by_scenario": [
+      -6004
+    ],
+    "notes": [
+      "奖金池按合办增量非负部分 × 0.65 计入"
+    ],
+    "pool_amount_by_scenario": [
+      0
+    ],
+    "pool_key": "J1",
+    "pool_rate": 0.65,
+    "pool_signable_total": 0
+  },
+  "scenarios": [
+    {
+      "assignment": {
+        "X12": {
+          "session": "S2",
+          "studio": "B"
+        },
+        "X13": {
+          "session": "S1",
+          "studio": "A"
+        },
+        "X14": {
+          "session": "S3",
+          "studio": "A"
+        },
+        "X15": {
+          "session": "S4",
+          "studio": "B"
+        },
+        "X16": {
+          "session": "S2",
+          "studio": "B"
+        },
+        "X17": {
+          "session": "S5",
+          "studio": "A"
+        }
+      },
+      "basis": "area",
+      "benchmarks": [
+        {
+          "control_sessions": [
+            "S5"
+          ],
+          "identifiable": true,
+          "match_class": "wk-A",
+          "note": "档 wk-A 单位面积普通营收，对照 S5",
+          "pooled_revenue": 9500,
+          "pooled_scale": 27,
+          "rate_per_unit": "351.8519"
+        }
+      ],
+      "by_session": [
+        {
+          "actual_net": 5500,
+          "counterfactual": 9852,
+          "identifiable": true,
+          "increment": -4352,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位面积普通营收，对照 S5 × 规模 28",
+          "session": "S1",
+          "studios": [
+            "A"
+          ]
+        },
+        {
+          "actual_net": 9600,
+          "counterfactual": 9852,
+          "identifiable": true,
+          "increment": -252,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位面积普通营收，对照 S5 × 规模 28",
+          "session": "S2",
+          "studios": [
+            "B"
+          ]
+        }
+      ],
+      "by_studio": [
+        {
+          "actual_net": 5500,
+          "counterfactual": 7177,
+          "direct_cost": 700,
+          "increment": -1677,
+          "net_increment": -2377,
+          "show_sessions": [
+            "S1"
+          ],
+          "studio": "A",
+          "unidentifiable_actual": 0
+        },
+        {
+          "actual_net": 9600,
+          "counterfactual": 12527,
+          "direct_cost": 700,
+          "increment": -2927,
+          "net_increment": -3627,
+          "show_sessions": [
+            "S2"
+          ],
+          "studio": "B",
+          "unidentifiable_actual": 0
+        }
+      ],
+      "joint": {
+        "actual_net": 15100,
+        "counterfactual": 19704,
+        "direct_cost": 1400,
+        "increment": -4604,
+        "net_increment": -6004
+      },
+      "unidentifiable_actual": 0,
+      "unidentifiable_sessions": []
+    }
+  ],
+  "studios": [
+    {
+      "attribution_payable": 0,
+      "bonus_candidates_by_scenario": [
+        0
+      ],
+      "bonus_overpaid": 1900,
+      "bonus_paid": 1900,
+      "bonus_pending": false,
+      "bonus_reserved": 0,
+      "bonus_signable": 0,
+      "carry_in": 0,
+      "carry_out": 5400,
+      "custodial_held": 0,
+      "guarantee_cash_payable": 0,
+      "guarantee_paid": 1200,
+      "guaranteed": 1200,
+      "max_bonus": 7200,
+      "pending_lines": [
+        {
+          "amount": 1900,
+          "basis": "历史奖金超发，作本方差额待抵扣，不得用他方争议款冲抵",
+          "kind": "bonus_overpaid",
+          "studio": "A"
+        },
+        {
+          "amount": 3500,
+          "basis": "已付款被后到确认改归他方，列本方应收/争议",
+          "kind": "receivable_carry",
+          "studio": "A"
+        },
+        {
+          "amount": 5400,
+          "basis": "本方待抵扣总额，仅限抵扣本方未来应付款",
+          "kind": "carry",
+          "studio": "A"
+        }
+      ],
+      "receivable_carry": 3500,
+      "signable_lines": [],
+      "studio": "A",
+      "unidentifiable_window": false
+    },
+    {
+      "attribution_payable": 3500,
+      "bonus_candidates_by_scenario": [
+        0
+      ],
+      "bonus_overpaid": 0,
+      "bonus_paid": 0,
+      "bonus_pending": false,
+      "bonus_reserved": 3800,
+      "bonus_signable": 0,
+      "carry_in": 0,
+      "carry_out": 0,
+      "custodial_held": 0,
+      "guarantee_cash_payable": 0,
+      "guarantee_paid": 1500,
+      "guaranteed": 1500,
+      "max_bonus": 5100,
+      "pending_lines": [
+        {
+          "amount": 3800,
+          "basis": "已预留金额仍未取得奖金依据，继续留置",
+          "kind": "reserve_kept",
+          "studio": "B"
+        }
+      ],
+      "receivable_carry": 0,
+      "signable_lines": [
+        {
+          "amount": 3500,
+          "basis": "凭证确认归属后的托管/关账补付，历史出账不回改",
+          "kind": "attribution_payable",
+          "studio": "B"
+        }
+      ],
+      "studio": "B",
+      "unidentifiable_window": false
+    }
+  ],
+  "totals": {
+    "bonus_signable": 0,
+    "carry_out": 5400,
+    "guarantee_payable": 0,
+    "reserved_kept": 3800,
+    "signable": 3500
+  },
+  "unidentifiable_sessions": [],
+  "unknown_notes": []
+}

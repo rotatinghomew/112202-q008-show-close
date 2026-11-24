@@ -1,0 +1,310 @@
+{
+  "basis": "traffic",
+  "cutoff_day": 13,
+  "period": "M1",
+  "pool": {
+    "joint_net_increment_by_scenario": [
+      -4772,
+      -4772
+    ],
+    "notes": [
+      "奖金池按合办增量非负部分 × 0.65 计入"
+    ],
+    "pool_amount_by_scenario": [
+      0,
+      0
+    ],
+    "pool_key": "J1",
+    "pool_rate": 0.65,
+    "pool_signable_total": 0
+  },
+  "scenarios": [
+    {
+      "assignment": {
+        "X12": {
+          "session": "S1",
+          "studio": "A"
+        },
+        "X13": {
+          "session": "S1",
+          "studio": "A"
+        },
+        "X14": {
+          "session": "S3",
+          "studio": "A"
+        },
+        "X15": {
+          "session": "S4",
+          "studio": "B"
+        },
+        "X16": {
+          "session": "S2",
+          "studio": "B"
+        },
+        "X17": {
+          "session": "S5",
+          "studio": "A"
+        }
+      },
+      "basis": "traffic",
+      "benchmarks": [
+        {
+          "control_sessions": [
+            "S5",
+            "S3"
+          ],
+          "identifiable": true,
+          "match_class": "wk-A",
+          "note": "档 wk-A 单位客流普通营收，对照 S5,S3",
+          "pooled_revenue": 18400,
+          "pooled_scale": 257,
+          "rate_per_unit": "71.5953"
+        }
+      ],
+      "by_session": [
+        {
+          "actual_net": 9000,
+          "counterfactual": 9021,
+          "identifiable": true,
+          "increment": -21,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位客流普通营收，对照 S5,S3 × 规模 126",
+          "session": "S1",
+          "studios": [
+            "A"
+          ]
+        },
+        {
+          "actual_net": 6100,
+          "counterfactual": 9451,
+          "identifiable": true,
+          "increment": -3351,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位客流普通营收，对照 S5,S3 × 规模 132",
+          "session": "S2",
+          "studios": [
+            "B"
+          ]
+        }
+      ],
+      "by_studio": [
+        {
+          "actual_net": 9000,
+          "counterfactual": 11010,
+          "direct_cost": 700,
+          "increment": -2010,
+          "net_increment": -2710,
+          "show_sessions": [
+            "S1"
+          ],
+          "studio": "A",
+          "unidentifiable_actual": 0
+        },
+        {
+          "actual_net": 6100,
+          "counterfactual": 7462,
+          "direct_cost": 700,
+          "increment": -1362,
+          "net_increment": -2062,
+          "show_sessions": [
+            "S2"
+          ],
+          "studio": "B",
+          "unidentifiable_actual": 0
+        }
+      ],
+      "joint": {
+        "actual_net": 15100,
+        "counterfactual": 18472,
+        "direct_cost": 1400,
+        "increment": -3372,
+        "net_increment": -4772
+      },
+      "unidentifiable_actual": 0,
+      "unidentifiable_sessions": []
+    },
+    {
+      "assignment": {
+        "X12": {
+          "session": "S2",
+          "studio": "B"
+        },
+        "X13": {
+          "session": "S1",
+          "studio": "A"
+        },
+        "X14": {
+          "session": "S3",
+          "studio": "A"
+        },
+        "X15": {
+          "session": "S4",
+          "studio": "B"
+        },
+        "X16": {
+          "session": "S2",
+          "studio": "B"
+        },
+        "X17": {
+          "session": "S5",
+          "studio": "A"
+        }
+      },
+      "basis": "traffic",
+      "benchmarks": [
+        {
+          "control_sessions": [
+            "S5",
+            "S3"
+          ],
+          "identifiable": true,
+          "match_class": "wk-A",
+          "note": "档 wk-A 单位客流普通营收，对照 S5,S3",
+          "pooled_revenue": 18400,
+          "pooled_scale": 257,
+          "rate_per_unit": "71.5953"
+        }
+      ],
+      "by_session": [
+        {
+          "actual_net": 5500,
+          "counterfactual": 9021,
+          "identifiable": true,
+          "increment": -3521,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位客流普通营收，对照 S5,S3 × 规模 126",
+          "session": "S1",
+          "studios": [
+            "A"
+          ]
+        },
+        {
+          "actual_net": 9600,
+          "counterfactual": 9451,
+          "identifiable": true,
+          "increment": 149,
+          "match_class": "wk-A",
+          "note": "反事实 = 档 wk-A 单位客流普通营收，对照 S5,S3 × 规模 132",
+          "session": "S2",
+          "studios": [
+            "B"
+          ]
+        }
+      ],
+      "by_studio": [
+        {
+          "actual_net": 5500,
+          "counterfactual": 6728,
+          "direct_cost": 700,
+          "increment": -1228,
+          "net_increment": -1928,
+          "show_sessions": [
+            "S1"
+          ],
+          "studio": "A",
+          "unidentifiable_actual": 0
+        },
+        {
+          "actual_net": 9600,
+          "counterfactual": 11744,
+          "direct_cost": 700,
+          "increment": -2144,
+          "net_increment": -2844,
+          "show_sessions": [
+            "S2"
+          ],
+          "studio": "B",
+          "unidentifiable_actual": 0
+        }
+      ],
+      "joint": {
+        "actual_net": 15100,
+        "counterfactual": 18472,
+        "direct_cost": 1400,
+        "increment": -3372,
+        "net_increment": -4772
+      },
+      "unidentifiable_actual": 0,
+      "unidentifiable_sessions": []
+    }
+  ],
+  "studios": [
+    {
+      "attribution_payable": 0,
+      "bonus_candidates_by_scenario": [
+        0,
+        0
+      ],
+      "bonus_overpaid": 1900,
+      "bonus_paid": 1900,
+      "bonus_pending": false,
+      "bonus_reserved": 0,
+      "bonus_signable": 0,
+      "carry_in": 0,
+      "carry_out": 1900,
+      "custodial_held": 0,
+      "guarantee_cash_payable": 0,
+      "guarantee_paid": 1200,
+      "guaranteed": 1200,
+      "max_bonus": 7200,
+      "pending_lines": [
+        {
+          "amount": 1900,
+          "basis": "历史奖金超发，作本方差额待抵扣，不得用他方争议款冲抵",
+          "kind": "bonus_overpaid",
+          "studio": "A"
+        },
+        {
+          "amount": 1900,
+          "basis": "本方待抵扣总额，仅限抵扣本方未来应付款",
+          "kind": "carry",
+          "studio": "A"
+        }
+      ],
+      "receivable_carry": 0,
+      "signable_lines": [],
+      "studio": "A",
+      "unidentifiable_window": false
+    },
+    {
+      "attribution_payable": 0,
+      "bonus_candidates_by_scenario": [
+        0,
+        0
+      ],
+      "bonus_overpaid": 0,
+      "bonus_paid": 0,
+      "bonus_pending": false,
+      "bonus_reserved": 3800,
+      "bonus_signable": 0,
+      "carry_in": 0,
+      "carry_out": 0,
+      "custodial_held": 0,
+      "guarantee_cash_payable": 0,
+      "guarantee_paid": 1500,
+      "guaranteed": 1500,
+      "max_bonus": 5100,
+      "pending_lines": [
+        {
+          "amount": 3800,
+          "basis": "已预留金额仍未取得奖金依据，继续留置",
+          "kind": "reserve_kept",
+          "studio": "B"
+        }
+      ],
+      "receivable_carry": 0,
+      "signable_lines": [],
+      "studio": "B",
+      "unidentifiable_window": false
+    }
+  ],
+  "totals": {
+    "bonus_signable": 0,
+    "carry_out": 1900,
+    "guarantee_payable": 0,
+    "reserved_kept": 3800,
+    "signable": 0
+  },
+  "unidentifiable_sessions": [],
+  "unknown_notes": []
+}

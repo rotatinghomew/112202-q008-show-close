@@ -11,7 +11,26 @@ python3 inspect_packet.py
 python3 -m unittest discover -s tests
 ```
 
-前一条命令只检查表头和记录形状并显示行数。可传入另一目录读取同格式记录。当前没有分析、决策或业务处理结果。
+前一条命令只检查表头和记录形状并显示行数。可传入另一目录读取同格式记录。
+
+## 结算引擎 `jointfair/`
+
+在资料包之上实现联展经营结算，全部金额内部以整数分/`Fraction` 精确运算，仅在出账边界按半数向上取整。
+
+```sh
+python3 -m jointfair.cli run --data data --out out
+python3 -m unittest discover -s tests
+```
+
+模块与口径：
+
+- `records.py`：TSV 装载与外键校验；`-`（不适用）与 `?`（未取得）解析为 `None`，从不当零。
+- `evidence.py`：截至日快照（只接收 `day <= cutoff` 的事实）、共享团确认级别（后到 correction > 真实入场联票；`transfer` 不确认）、预热链生效条件、凭证可行归属枚举（后到 amend 唯一化，否则枚举候选组合）、退款随同一 tender 归属。
+- `increment.py`：按 `match_class` 同类分组建反事实基准（合并率＝合格对照营收合计÷规模合计），支持 `area`/`traffic` 两口径；无同类对照的窗口标 `unidentifiable`，其实收单列、不产生奖金依据；按场次与按合作方两视图在精确分数下强制对平。`unit=direct` 的边际开支才进增量，`shared` 共享费用不当边际开支。
+- `settle.py`：保底为独立条款；奖金池＝`max(合办新增净收益,0)×pool_rate`；各方奖金同受本方非负净增量、单方 `max_bonus`、共同池总额三道约束（超池按比例缩减）；摇摆项取各场景稳健交集，未决部分留置不静默释放；托管款未归属不进任何一方，确认后开调账释放；历史出账不回改，应减项作本方待抵扣/争议，禁止跨合作方冲抵；`build_adjustment` 生成可回查正式单（`BP*`/`K*`/`AM*`）的调账单。
+- `report.py` / `cli.py`：每个周期×截至日×口径输出 `*_settlement.json`、`*_report.md`，相邻截至日另出 `*_adjustment.json`。
+
+默认截至日：M1 第 13、15 日（AM1 到达前后），M2 第 19、23 日（AM2 到达前后），可用 `--cutoffs M1=13,15 M2=19,23` 覆盖。
 
 ## 输入表
 
